@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes"> 
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+    <title>Francke Jones - Designer, Coder</title>
+
+    <!-- ionic css -->
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="iconfont/fontcustom.css" rel="stylesheet">
+    <!-- your app's css -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/video.js"></script>
+
+    <!-- angularjs scripts -->
+    <script src="js/ionic.js"></script>
+    <script src="js/angular/angular.js"></script>
+    <script src="js/angular/angular-resource.min.js"></script>
+    <script src="js/angular/angular-animate.js"></script>
+    <script src="js/angular/angular-route.js"></script>
+    <script src="js/angular/angular-touch.js"></script>
+    <script src="js/angular/angular-sanitize.js"></script>
+    <script src="js/angular-ui/angular-ui-router.js"></script>
+    <script src="js/ionic-angular.js"></script>
+
+    
+
+
+
+
+    <!-- cordova script -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's script -->
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    
+</head>
+
+<!-- 'starter' is the name of this angular module (js/app.js)  -->
+
+<body ng-app="starter">
+
+<nav-bar class="nav-title-slide-ios7" type="bar-positive" left-buttons="leftButtons" right-buttons="rightButtons" hide-back-button="true"></nav-bar>
+
+    <!-- where the initial view template will be rendered -->
+    <nav-view animation="slide-left-right"></nav-view>
+    <script type="text/javascript">
+      // Dummy value for demonstrating device.noConflict()
+      window.device = "Hello World!";
+    </script>
+    <script src="js/device.js"></script>
+    <script type="text/javascript">
+      
+        
+
+
+    if (device.portrait() == false)
+      {
+      window.location = "/#/pet";
+      }
+
+      console.log("device.portrait() === %s", device.portrait());
+      console.log("device.landscape() === %s", device.landscape());
+      console.log("device.mobile() === %s", device.mobile());
+      console.log("device.tablet() === %s", device.tablet());
+      console.log("device.ipad() === %s", device.ipad());
+      console.log("device.ipod() === %s", device.ipod());
+      console.log("device.iphone() === %s", device.iphone());
+      console.log("device.android() === %s", device.android());
+      console.log("device.androidTablet() === %s", device.androidTablet());
+      console.log("device.blackberryTablet() === %s", device.blackberryTablet());
+      console.log("device.fxos() === %s", device.fxos());
+      console.log("device.fxosPhone() === %s", device.fxosPhone());
+      console.log("device.fxosTablet() === %s", device.fxosTablet());
+
+      var devicejs = device.noConflict();
+
+      console.log ("device.noConflict() [previous]", window.device);
+      console.log ("device.noConflict() [device.js]", devicejs.iphone());
+    </script>
+
+</body>
+
+</html>

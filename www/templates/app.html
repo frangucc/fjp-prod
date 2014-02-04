@@ -1,0 +1,120 @@
+<nav-page id="app-page">
+  <!--
+  Create tabs with an icon and text label, using the tabs-positive style (blue by default),
+  and disabling header title animation when switching tabs.
+  -->
+  <tabs tabs-style="tabs-icon-top" tabs-type="tabs-positive" animate-nav="false">
+
+    <!-- Pets tab -->
+    <tab title="Pets" icon="icon ion-home" ng-controller="PetsTabCtrl">
+      <content has-header="true" has-tabs="true">
+        <list>
+          <item ng-repeat="pet in pets" type="item-text-wrap" href="#/pet/{{pet.id}}">
+              <h3>{{pet.title}}</h3>
+              <p>{{pet.description}}</p>
+            </item>
+          </item>
+        </list>
+
+      </content>
+    </tab>
+    <!-- Project tab -->
+    <tab title="Project" icon="icon ion-heart">
+      <content has-header="false" has-tabs="false">
+        <div class="padding">
+          <h2>Jeesh</h2>
+         
+        </div>
+        <div class="list card">
+
+  <div class="item item-avatar">
+    <img src="mcfly.jpg">
+    <h2>Marty McFly</h2>
+    <p>November 05, 1955</p>
+  </div>
+
+  <div class="item item-body">
+    <img class="full-image" src="delorean.jpg">
+    <p>
+      This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+      the content is from a card-body consisting of an image and paragraph text. The footer
+      consists of a Tab Bar, icons aligned left, within the card-footer.
+    </p>
+    <p>
+      <a href="#" class="subdued">1 Like</a>
+      <a href="#" class="subdued">5 Comments</a>
+    </p>
+  </div>
+
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    <a class="tab-item" href="#">
+      <i class="icon ion-thumbsup"></i>
+      Like
+    </a>
+    <a class="tab-item" href="#">
+      <i class="icon ion-chatbox"></i>
+      Comment
+    </a>
+    <a class="tab-item" href="#">
+      <i class="icon ion-share"></i>
+      Share
+    </a>
+  </div>
+
+</div>
+
+      </content>
+    </tab>
+    <!-- Adoption tab -->
+    <tab title="Adopt" icon="icon ion-heart">
+      <content has-header="true" has-tabs="true">
+        <div class="padding">
+          <h2>Adopt a pet today.</h2>
+
+          
+         
+        </div>
+        <div class="list list-inset">
+          <label class="item item-input">
+            <span class="input-label">Your name</span>
+            <input type="text">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Your email</span>
+            <input type="password">
+          </label>
+          <label class="item item-input">
+            <textarea placeholder="Any more info?"></textarea>
+          </label>
+          <button class="button button-positive button-block">Adopt</button>
+
+        </div>
+
+      </content>
+    </tab>
+
+    <!-- Home tab -->
+    <tab title="About" icon="icon ion-search">
+      <content has-header="true" has-tabs="true" padding="true">
+      <div ng-controller="IntroCtrl">
+        <form novalidate class="simple-form">
+      <div id="messagesDiv">
+      <div ng-repeat="msg in messages"><em>{{msg.from}}</em>: {{msg.body}}</div>
+      </div>
+      <br />
+    <label class="item item-input">
+    <span class="input-label"><input type="text" ng-model="name" placeholder="Name"></span>
+    </label>
+    <label class="item item-input">
+    <span class="input-label"><input type="text" ng-model="msg" ng-keydown="addMessage($event)" placeholder="Message..."></span></label>
+
+    <button class="button button-positive button-block" ng-click="update(message)">Write on Wall b</button>
+      
+    </form>
+    </div>
+      </content>
+    </tab>
+
+  </tabs>
+
+</nav-page>
